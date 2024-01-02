@@ -1,51 +1,73 @@
-# Title: Predictive Forecasting: Is it wimdy?
+## Project Name: WindyPredictAI
 
--[Collaboration](#Collaboration)<br>
--[Project_Overview](#Overview)<br>
--[Methods](#Methods)<br>
--[Features](#Features)<br>
--[Target](#Target)<br>
--[Expected_Outcomes](#Expected_Outcomes)<br>
--[Outcomes](#Outcomes)
+# Overview:
+In the collaborative project "WindyPredictAI," our team, consisting of Eleanor Hayden, Stefan Shover, and Erika Walker, explores Predictive Forecasting with a focus on wind speed prediction. Leveraging historical weather data from Iowa State University and current weather forecasts from Weather.gov for Saint Louis, our goal is to train a neural network model capable of predicting whether it will be windy. The outcomes of this project carry practical implications for industries such as construction, sports events, and individual activity planning.
 
-
-# Collaboration: 
-<ul>
-    <li>Eleanor Hayden</li>
-    <li>Stefan Shover</li> 
-    <li>Erika Walker</li>
-</ul>
-
-# Project_overview:
-In a world where accurate weather predictions can significantly impact various sectors, our collaborative team—comprising Eleanor Hayden, Stefan Shover, and Erika Walker—embarks on a journey of Predictive Forecasting: Is it Wimdy?  We plan on taking historical weather data from Iowa State University (https://mesonet.agron.iastate.edu/request/download.phtml)  and train a neural network model.  Given current weather forecasts in Saint Louis (https://www.weather.gov/)  we are going to attempt to see how well our model can predict whether it will rain or not. Beyond a mere meteorological curiosity, our pursuit holds practical implications for industries like construction, sports events, and the everyday decisions of individuals planning activities such as picnics.
-
-# Methods:
-<ol>
-
-<li>Data Collection: Training data will come from Iowa State University (https://mesonet.agron.iastate.edu/request/download.phtml).  While Testing data will come from Weather.gov (https://www.weather.gov/) for Saint Louis.</li>
-
-<li>Data Cleaning: Utilizing Pandas, we will make sure that all data is comparable to each other (ie: features matching features between training sets and testing sets).  We will also make sure that data undergoes tensorization (vectorize the data so the machine learning algorithm can better interpret the features).</li>
-
-<li>Crafting a model: We will first try gradient boosted models such as XGboost, we also built a Neural Network model that will hopfully be able to find patterns and predict wind speed.</li>
-<ol>
+# Key Features:
+1) __Data Collection:__
+    * Training data sourced from Iowa State University `(https://mesonet.agron.iastate.edu/request/download.phtml)`.
+    * Testing data obtained from Weather.gov `(https://www.weather.gov/)` for Saint Louis.
+2) __Data Cleaning:__
+    * Utilizing Pandas, ensures data comparability across features in training and testing sets.
+    * Applies tensorization to vectorize data for improved machine learning interpretation.
+3) __Model Development:__
+    * Explores gradient boosted models, such as XGBoost, for initial predictions.
+    * Constructs a Neural Network model to identify patterns and predict wind speed.
 
 # Features:
-<ul>
-    <li>Relative Humidity</li>
-    <li>Temperature</li>
-    <li>Dewpoint</li>
-    <li>Wind Speed</li>
-    <li>Short Forecast</li>
-    <li>Is Daytime</li>
-    <li>Mapped Forecast</li>
+* Relative Humidity
+* Temperature
+* Dewpoint
+* Wind Speed
+* Short Forecast
+* Is Daytime
+* Mapped Forecast
 
 # Target:
-<ul>
-    <li>Wind Speed (Knots): Float value</li>
-</ul>
+* Wind Speed (Knotes): Float value
 
-# Expected_Outcomes:
-This will be an interesting project to see if a machine learning model can be trained on historical data.  Then make rain predictions based upon current weather data.  We are designing this model to see how well it can predict rain or not.  We hope that our model will be >80% accuracy, given the features we have selected.
+# Expected Outcomes:
+This intriguing project aims to assess the performance of machine learning models trained on historical data for predicting rain. By incorporating current weather data, our model strives to achieve over 80% accuracy in predicting whether it will be windy.
 
 # Outcomes:
-Seems that both methods XGBoosted Regression and Deep Neural network were unable to find patterns in our data.  We have come to the conclusion that we need more expanded features, or more data that is pertains to whether it would rain or not.  We had to make concessions with our data both historical and forecast.
+Both XGBoosted Regression and the Deep Neural Network methods struggled to discern patterns in the data. It became evident that the available features and data were insufficient. To improve the model, we recommend considering additional features or obtaining more relevant data related to rain predictions. The limitations arose from compromises made with the historical and forecast data.
+
+# Project Structure:
+* Data Retrieval and Processing:
+    * Fetches and processes historical and forecasted weather data.
+* Normalization and Preprocessing:
+    * Utilizes Scikit-learn transformers to normalize and preprocess the data.
+* Model Training and Evaluation:
+    * Explores gradient boosted models (XGBoost) and develops a Neural Network for wind speed prediction.
+    * Evaluates the model using relevant metrics and visualizations.
+* Hyperparameter Tuning:
+    * Utilizes Keras Tuner to search for optimal hyperparameters for the Neural Network.
+* Model Export:
+    * Saves the trained model for future use or deployment.
+
+# Requirements:
+* Python 3.x
+* Libraries: requests, pandas, numpy, scikit-learn, TensorFlow, Keras Tuner, XGBoost, matplotlib
+
+# How to Use:
+1) __Clone the Repository__
+```bash
+git clone https://github.com/yourusername/WindyPredictAI.git
+cd WindyPredictAI
+```
+2) __Install Dependencies:__
+3) __Run  the Jupyter Notebooks:__
+   * Open and run the Jupyter Notebook provided (`WindyPredictAI.ipynb`).
+4) __Explore and Customize:__
+   * Explore the notebook, modify parameters, or extend functionality based on your needs.
+5) __Save and Export:__
+   * Save the trained model and any generated visualizations.
+
+# Authors:
+Erika Walker
+Eleanor Hayden
+Stefan Shover
+
+# Acknowledgments:
+Special thanks to Iowa State University for the historical weather data, Weather.gov for the forecast data, and the open-source community for their contributions.
+
